@@ -33,13 +33,7 @@ export const data: Data = {
             title: 'Vegetariano',
             cover: 'https://s2-ge.glbimg.com/lu8n7R6UaF-7PINiLWp9NOHvLlk=/0x0:1254x836/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2021/1/b/qoh5cQTo6ZUjtjcfvTsg/esporte-veganismo.jpg'
         },
-        {
-            id: 6,
-            title: 'Pós-treino',
-            cover: 'https://s2-ge.glbimg.com/lu8n7R6UaF-7PINiLWp9NOHvLlk=/0x0:1254x836/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2021/1/b/qoh5cQTo6ZUjtjcfvTsg/esporte-veganismo.jpg'
-
-
-        }
+       
     ],
     products: [
         { id: 4, idCategory: 1, image: "https://www.gsuplementos.com.br/upload/produto/layout/185/image01-interna.webp", title: "WHEY PROTEIN GROWTH", description: "Whey protein Growth fornece proteínas para quem deseja hipertrofia e definição muscular.", price: 89.99 },

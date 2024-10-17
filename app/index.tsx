@@ -12,11 +12,11 @@ export default function Screen (){
         
         <SafeAreaView style={styles.container}>
             <ImageBackground 
-            source={{uri: 'https://w0.peakpx.com/wallpaper/928/286/HD-wallpaper-gym-lover-motivation-lover-gym-fitness.jpg'}}
+            source={{uri: 'https://magazinefeminin.com/pt-br/wp-content/uploads/2024/07/Wallpaper-Celular-Azul-Claro-13.png'}}
             style={styles.back}>
         
             <Image
-                source={require('../assets/creatine.png')}
+                source={require('../assets/Cabeçalho.png')}
                 style={styles.logo}
                 resizeMode="cover"
             />
@@ -47,8 +47,8 @@ const styles = StyleSheet.create({
 
     },
     logo:{
-        width: 200,
-        height: 200, 
+        width: 400,
+        height: 300, 
         marginBottom: 20
     },
     h1:{

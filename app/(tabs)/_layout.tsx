@@ -38,11 +38,13 @@ export default function TabLayout(){
         />
 
     <Tabs.Screen 
-            name="meumenu"
+            name="menu"
             options={{
-                    title: 'Menu',
-                    tabBarIcon :({color}) => <FontAwesome size={28} name="user" color={'#f99b0d'}/>
-            }}
+                title: 'Menu',
+                tabBarIcon :({color}) => <FontAwesome size={28} name="user" color={'#f99b0d'}/>,
+                headerShown: false 
+        }}
+            
         />
 
         </Tabs>
