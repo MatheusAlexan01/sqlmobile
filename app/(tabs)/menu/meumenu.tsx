@@ -1,7 +1,7 @@
 import { View,Text,Pressable,StatusBar,StyleSheet } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
-import { useRouter } from "expo-router";
+import { useRouter,Link } from "expo-router";
 
 
 export  default function Screen () {
@@ -18,34 +18,40 @@ const router = useRouter()
 
 
 <View style={styles.columnL} >
-    <Pressable onPress={() => router.push('./menu/conta')}>
+    <Link href={'./conta'} asChild>
+    <Pressable >
     <View style={styles.column}>
     <Text style={styles.titleColumn}> <FontAwesome size={28} name="cog" color={'white'}/>  Minha Conta</Text>
 </View>
     </Pressable>
+    </Link>
 
 </View>
 
 <View style={styles.columnL2}>
-    <Pressable onPress={() => router.push('./menu/Promocoes')}>
+    <Link href={'./Promocoes'} asChild>
+    <Pressable >
     <View style={styles.column2}>
     <Text style={styles.titleColumn}> <FontAwesome size={28} name="bolt" color={'white'}/> Promoções</Text>
 </View>
     </Pressable>
+    </Link>
 
 </View>
 
 <View style={styles.columnL3}>
-    <Pressable onPress={() => router.push('./menu/cadastrar')}>
+    <Link href={'./cadastrar'} asChild>
+    <Pressable >
     <View style={styles.column3}>
     <Text style={styles.titleColumn}> <FontAwesome size={28} name="truck" color={'white'}/> Cadastrar Produto</Text>
 </View>
     </Pressable>
+    </Link>
 
 </View>
 
 <View style={styles.columnL4}>
- <Pressable onPress={() => router.push('./menu/notificacoes')}>
+ <Pressable onPress={() => router.navigate('./menu/notificacoes')}>
  <View style={styles.column4}>
     <Text style={styles.titleColumn}> <FontAwesome size={28} name="bell" color={'white'}/> Notificações</Text>
 </View>
