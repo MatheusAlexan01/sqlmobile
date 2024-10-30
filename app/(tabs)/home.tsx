@@ -1,14 +1,14 @@
-import { View, Text, StyleSheet, FlatList } from "react-native";
+import { View, StyleSheet, FlatList } from "react-native";
 import { useState, useEffect } from "react";
 import { Productdatabase, useProduct } from "../../services/banco";
-import { ProductL } from "../../components/produtcList"; // Ajuste o caminho se necessário
+import { ProductL } from "../../components/produtcList";
+import { useIsFocused } from "@react-navigation/native";
 
-export default function Screen() {
-  // Estado para armazenar a lista de produtos
+export default function HomeScreen() {
   const [products, setProducts] = useState<Productdatabase[]>([]);
   const { searchbyname, remove } = useProduct();
+  const isFocused = useIsFocused();
 
-  // Função para carregar os produtos
   async function loadProducts() {
     try {
       const allProducts = await searchbyname(''); // Busca todos os produtos
@@ -18,29 +18,28 @@ export default function Screen() {
     }
   }
 
-  // Carrega os produtos ao montar o componente
-  useEffect(() => {
-    loadProducts();
-  }, []);
-
-  // Função para remover o produto e atualizar a lista em tempo real
   async function removeProduct(id: number) {
     try {
-      await remove(id); // Remove o produto do banco de dados
-      setProducts((prevProducts) => prevProducts.filter((product) => product.id !== id)); // Atualiza o estado removendo o produto
+      await remove(id);
+      setProducts((prevProducts) => prevProducts.filter((product) => product.id !== id));
     } catch (error) {
       console.error("Erro ao remover produto:", error);
     }
   }
 
+  useEffect(() => {
+    if (isFocused) {
+      loadProducts(); // Recarrega os produtos quando a tela é focada
+    }
+  }, [isFocused]);
+
   return (
     <View style={styles.container}>
       <FlatList
+      
         data={products}
         keyExtractor={(item) => String(item.id)}
-        renderItem={({ item }) => (
-          <ProductL data={item} OnDelete={() => removeProduct(item.id)} />
-        )}
+        renderItem={({ item }) => <ProductL data={item} OnDelete={() => removeProduct(item.id)} />}
         contentContainerStyle={styles.list}
       />
     </View>

@@ -18,40 +18,40 @@ const router = useRouter()
 
 
 <View style={styles.columnL} >
-    <Link href={'./conta'} asChild>
-    <Pressable >
+    
+    <Pressable onPress={() => router.push('/menu/conta')}>
     <View style={styles.column}>
     <Text style={styles.titleColumn}> <FontAwesome size={28} name="cog" color={'white'}/>  Minha Conta</Text>
 </View>
     </Pressable>
-    </Link>
+ 
 
 </View>
 
 <View style={styles.columnL2}>
-    <Link href={'./Promocoes'} asChild>
-    <Pressable >
+    
+    <Pressable onPress={() => router.push('/menu/Promocoes')}>
     <View style={styles.column2}>
     <Text style={styles.titleColumn}> <FontAwesome size={28} name="bolt" color={'white'}/> Promoções</Text>
 </View>
     </Pressable>
-    </Link>
+    
 
 </View>
 
 <View style={styles.columnL3}>
-    <Link href={'./cadastrar'} asChild>
-    <Pressable >
+    
+    <Pressable  onPress={() => router.push('/menu/cadastrar')}>
     <View style={styles.column3}>
     <Text style={styles.titleColumn}> <FontAwesome size={28} name="truck" color={'white'}/> Cadastrar Produto</Text>
 </View>
     </Pressable>
-    </Link>
+    
 
 </View>
 
 <View style={styles.columnL4}>
- <Pressable onPress={() => router.navigate('./menu/notificacoes')}>
+ <Pressable onPress={() => router.push('/menu/notificacoes')}>
  <View style={styles.column4}>
     <Text style={styles.titleColumn}> <FontAwesome size={28} name="bell" color={'white'}/> Notificações</Text>
 </View>
