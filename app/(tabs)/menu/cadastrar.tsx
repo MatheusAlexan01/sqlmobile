@@ -6,7 +6,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { StatusBar } from "expo-status-bar";
 import { useIsFocused } from "@react-navigation/native";
 
-export default function CadastroScreen({ navigation }) {
+export default function CadastroScreen({  }) {
   const [name, setName] = useState('');
   const [id, setId] = useState('');
   const [url, setUrl] = useState('');
@@ -87,7 +87,8 @@ export default function CadastroScreen({ navigation }) {
           </View>
         }
         renderItem={({ item }) => (
-          <ProductL data={item} OnDelete={() => removeProduct(item.id)} />
+          <ProductL data={item} OnDelete={() => removeProduct(item.id)} showDeleteButton={true} 
+          showId={true} showLer={false}/>
         )}
         contentContainerStyle={styles.listContainer}
       />
@@ -96,7 +97,7 @@ export default function CadastroScreen({ navigation }) {
 }
 
 const styles = StyleSheet.create({
-  container1: { flex: 1, backgroundColor: '#ffffff' },
+  container1: { flex: 1, backgroundColor: '#74bfd3' },
   headerContainer: {
     padding: 20,
     backgroundColor: '#1899d5',

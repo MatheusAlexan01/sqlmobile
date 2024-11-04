@@ -23,6 +23,8 @@ export default function TabLayout(){
                 name="conta"
                 options={{
                         title: 'Conta',
+                        headerStyle :{backgroundColor: '#1899d5'},
+                        headerTitleStyle: { color: '#ffffff' },
                        
                 }}
             />
@@ -31,6 +33,8 @@ export default function TabLayout(){
                 name="Promocoes"
                 options={{
                         title: 'Ofertas e Promoções',
+                        headerStyle :{backgroundColor: '#1899d5'},
+                        headerTitleStyle: { color: '#ffffff' },
                        
                 }}
             />
@@ -39,6 +43,8 @@ export default function TabLayout(){
                 name="cadastrar"
                 options={{
                         title: 'Cadastrar',
+                        headerStyle :{backgroundColor: '#1899d5'},
+                        headerTitleStyle: { color: '#ffffff' },
                        
                 }}
             />
@@ -47,6 +53,8 @@ export default function TabLayout(){
                 name="notificacoes"
                 options={{
                         title: 'Notificações',
+                        headerStyle :{backgroundColor: '#1899d5'},
+                        headerTitleStyle: { color: '#ffffff' },
                        
                 }}
             />

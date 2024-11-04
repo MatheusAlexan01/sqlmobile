@@ -71,6 +71,7 @@ const router = useRouter()
 const styles = StyleSheet.create({
     container: {
         flex: 1,
+        backgroundColor: '#74bfd3'
         
         
        
@@ -176,3 +177,4 @@ const styles = StyleSheet.create({
 
     
 })
+

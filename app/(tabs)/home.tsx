@@ -36,10 +36,13 @@ export default function HomeScreen() {
   return (
     <View style={styles.container}>
       <FlatList
-      
+        numColumns={2}
         data={products}
         keyExtractor={(item) => String(item.id)}
-        renderItem={({ item }) => <ProductL data={item} OnDelete={() => removeProduct(item.id)} />}
+        renderItem={({ item }) => <ProductL data={item} OnDelete={() => removeProduct(item.id)} 
+        showDeleteButton={false} 
+      showId={false}
+      showLer={true}/>}
         contentContainerStyle={styles.list}
       />
     </View>
@@ -50,8 +53,10 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#74bfd3',
+   
   },
   list: {
-    padding: 20,
+    alignItems: 'center'
+    
   },
 });

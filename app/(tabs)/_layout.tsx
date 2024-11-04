@@ -12,13 +12,18 @@ export default function TabLayout(){
                 headerTitleStyle:{color: '#ffff'},
                  tabBarInactiveBackgroundColor: '#ffffff',
                 tabBarActiveTintColor: '#000000',
+                
+                
             }}>
             <Tabs.Screen 
                 name="home"
                 options={{
                         title: 'Início',
-                        tabBarIcon :({color}) => <FontAwesome size={28} name="home" color={'#f99b0d'}/>
+                        tabBarIcon :({color}) => <FontAwesome size={28} name="home" color={'#f99b0d'}/>,
+                       headerStyle :{backgroundColor: '#1899d5'},
+                       headerTitleStyle: { color: '#ffffff' },
                 }}
+                
             />
             <Tabs.Screen 
                 name="categories"
@@ -26,14 +31,17 @@ export default function TabLayout(){
                     
                         title: 'Categorias',
                         headerShown: false,
-                        tabBarIcon :({color}) => <FontAwesome size={28} name="archive" color={'#f99b0d'}/>
+                        tabBarIcon :({color}) => <FontAwesome size={28} name="archive" color={'#f99b0d'}
+                        />,
+                        headerStyle :{backgroundColor: 'black'}
                 }}
             />
             <Tabs.Screen 
             name="about"
             options={{
                     title: 'Sobre mim',
-                    tabBarIcon :({color}) => <FontAwesome size={28} name="info" color={'#f99b0d'}/>
+                    tabBarIcon :({color}) => <FontAwesome size={28} name="info" color={'#f99b0d'}/>,
+                    headerStyle :{backgroundColor: '#1899d5'}
             }}
         />
 

@@ -49,7 +49,6 @@ const styles = StyleSheet.create({
         
     },
     scroll: {
-        flex: 1
     },
     header:{
         alignItems: 'center',
